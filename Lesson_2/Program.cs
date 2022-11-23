@@ -9,6 +9,8 @@ StringInterpolation();
 StringVerbatim();
 StringEqality();
 StringEqualitySpecifingCompareRules();
+StringAreImmutable();
+FunWithStringBuilder();
 
 static void BasicStringFunctionality()
 {
@@ -143,3 +145,21 @@ static void StringAreImmutable()
     //Нет! Строка s1 осталасьв том же виде!
     Console.WriteLine("s1 = {0}",s1);
 }
+
+static void FunWithStringBuilder() //тип System.StringBuilder
+{
+    Console.WriteLine("=> Using the StringDuilder:");
+    StringBuilder sb = new StringBuilder("****Fantastic Games*****");
+    sb.Append("\n");
+    sb.AppendLine("Half Life");
+    sb.AppendLine("Morrowind");
+    sb.AppendLine("Deus Ex" + "2");
+    sb.AppendLine("System Shock");
+    Console.WriteLine(sb.ToString());
+    sb.Replace("2","Invisible War");
+    Console.WriteLine(sb.ToString());
+    Console.WriteLine("sb has {0} chars.", sb.Length);
+    Console.WriteLine();
+
+}
+
